@@ -154,7 +154,7 @@
 header, footer, section {
   display: block;
   width: 100%;
-  padding: 10px;
+  padding: 0.75rem;
 }
 
 .container {
@@ -171,7 +171,6 @@ header, footer, section {
 
 .col {
   float: left;
-  /*overflow: hidden;*/
 }
 
 a {
@@ -217,11 +216,11 @@ header .main-menu {
   ;
 }
 
-.main-menu ul::after {
+.main-menu .dropdown-menu::after {
   content: "";
   border-left: 1rem solid transparent;
   border-right: 1rem solid transparent;
-  border-bottom: 15px solid #000;
+  border-bottom: 1rem solid #000;
   position: absolute;
   top: -0.5rem;
   left: 2.25rem;
@@ -239,8 +238,7 @@ header .main-menu {
 
 /* BANNER SECTION */
 
-.banner {
-  position: relative;
+section.banner {
   background: rgba(254, 254, 254, 1);
   background: -moz-linear-gradient(top, rgba(254, 254, 254, 1) 2%, rgba(231, 231, 231, 1) 45%, rgba(219, 219, 219, 1) 68%, rgba(226, 226, 226, 1) 81%, rgba(209, 209, 209, 1) 97%, rgba(209, 209, 209, 1) 100%);
   background: -webkit-gradient(left top, left bottom, color-stop(2%, rgba(254, 254, 254, 1)), color-stop(45%, rgba(231, 231, 231, 1)), color-stop(68%, rgba(219, 219, 219, 1)), color-stop(81%, rgba(226, 226, 226, 1)), color-stop(97%, rgba(209, 209, 209, 1)), color-stop(100%, rgba(209, 209, 209, 1)));
@@ -251,23 +249,25 @@ header .main-menu {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', endColorstr='#d1d1d1', GradientType=0);
 }
 
-.banner .row {
-  width: 90%;
+section.banner .row {
+  padding: 1rem 0;
   overflow: hidden;
 }
 
-.banner .img-chair {
+section.banner .container {
+  position: relative;
+}
+
+section.banner .img-chair {
   background: url('../images/black_chair.png') no-repeat center/ cover;
 }
 
-.banner .col {
+section.banner .col {
   width: 50%;
   height: 22rem;
-  ;
-  width: 50%;
 }
 
-.banner .col h1 {
+section.banner .col h1 {
   text-transform: uppercase;
   text-align: center;
   font-size: 2rem;
@@ -276,7 +276,7 @@ header .main-menu {
   margin: 1rem auto;
 }
 
-.banner .col p {
+section.banner .col p {
   text-align: center;
   font-size: 1rem;
   padding-top: 1rem;
@@ -285,7 +285,8 @@ header .main-menu {
   color: #222222;
 }
 
-.banner .button-info {
+section.banner .button-info {
+  display: block;
   width: 50%;
   height: 3.25rem;
   background: #24C8AD;
@@ -299,10 +300,6 @@ header .main-menu {
   overflow: hidden;
 }
 
-.banner a {
-  text-decoration: none;
-}
-
 .arrow {
   height: 100%;
   color: #24C8AD;
@@ -311,8 +308,8 @@ header .main-menu {
   padding-top: 6.5rem;
 }
 
-.arrow.right {
-  right: 12%;
+.arrow-right {
+  right: 0;
 }
 
 
@@ -323,31 +320,31 @@ section.offer {
   overflow: hidden;
 }
 
-body>section:nth-of-type(2) .col {
+section.offer .col {
   position: relative;
   width: 30%;
   height: 15.5em;
+  margin: 0 1.66%;
 }
 
 .chair01 {
   background: url('../images/box1_img.jpg') no-repeat center/ cover;
-  margin-right: 3.33%;
 }
 
 .chair02 {
   background: url('../images/box2_img.jpg') no-repeat center/ cover;
 }
 
-.offer-box_info {
+.offer-box {
   position: absolute;
   top: 70%;
   height: 3.125em;
   width: 100%;
-  padding-bottom: 10px;
+  padding-bottom: 0.75em;
   background-color: rgba(255, 255, 255, 0.5);
 }
 
-.offer-box_info p {
+.offer-box p {
   margin-left: 1.5em;
   padding-top: 0.75em;
   font-weight: bold;
@@ -356,7 +353,7 @@ body>section:nth-of-type(2) .col {
   overflow: hidden;
 }
 
-section .container .offer-info p:first-of-type {
+.offer-info p:first-of-type {
   margin-left: 1.5em;
   padding-top: 1em;
   font-weight: bold;
@@ -373,7 +370,6 @@ section .container .offer-info p:first-of-type {
 .offer-info P:last-of-type {
   font-size: 0.9em;
   padding: 1.5em;
-  ;
   color: #8D8D8D;
 }
 
@@ -410,11 +406,7 @@ section.price-list {
   border: 2px solid #D7D7D7;
   position: relative;
   background: #F8F8F8;
-  margin-right: 3.33%;
-}
-
-.big-box {
-  background: #F8F8F8;
+  margin: 0 1.66%;
 }
 
 .circle-big {
@@ -438,7 +430,7 @@ section.price-list {
   background-color: #C1C1C1;
 }
 
-section:nth-of-type(3) h2 {
+section.price-list h2 {
   padding-top: 2em;
   text-transform: uppercase;
   font-size: 1.5em;
@@ -463,7 +455,7 @@ section:nth-of-type(3) h2 {
   text-align: center;
 }
 
-.circle-price_amount p:nth-of-type(2) {
+.circle-price_amount p:last-of-type {
   font-size: 1em;
   text-align: center;
   margin-top: 0.25em;
@@ -550,14 +542,14 @@ sup {
   border: none;
 }
 
+
+/* CONTACT FORM SECTION */
+
 .contact-form {
   width: 60%;
 }
 
-
-/* CONTACT FORM SECTION */
-
-section:nth-of-type(4) h2 {
+section.contact h2 {
   text-transform: uppercase;
   font-size: 1.5rem;
   color: #777777;
@@ -571,6 +563,14 @@ form[name=contact] {
   padding: 1.5em 0;
 }
 
+form[name=contact] ::placeholder {
+  color: #CDCDCD;
+  font-size: 2rem;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  font-family: 'Raleway', sans-serif;
+}
+
 input {
   width: 100%;
   margin: 1rem 0;
@@ -581,21 +581,13 @@ input {
   color: #777777;
 }
 
-form[name=contact] textarea {
+textarea {
   width: 100%;
   height: 12.5rem;
   border: 1px solid #24C8AD;
   font-family: 'Raleway', sans-serif;
   font-size: 2em;
   color: #777777;
-}
-
-form[name=contact] ::placeholder {
-  color: #CDCDCD;
-  font-size: 2rem;
-  padding-top: 1rem;
-  padding-left: 1rem;
-  font-family: 'Raleway', sans-serif;
 }
 
 .agreement {
@@ -627,6 +619,7 @@ section:last-of-type p:last-of-type {
 }
 
 .button-send {
+  display: block;
   height: 4rem;
   width: 90%;
   background: #24C8AD;
@@ -658,14 +651,10 @@ footer .copyright {
 footer .social {
   float: right;
   width: 35%;
-}
-
-footer .social {
   text-transform: uppercase;
   padding-right: 1.5rem;
   color: #B4B4B4;
   font-size: 1.5rem;
-  display: inline-block;
 }
 
 footer .sm_icons img {

@@ -254,16 +254,16 @@ section.banner .container {
   position: relative;
 }
 
-.img-chair ul{
-    list-style: none;
+.img-chair ul {
+  list-style: none;
 }
 
-.img-chair li{
-    display: none;
+.img-chair li {
+  display: none;
 }
 
-.img-chair .visible{
-    display: inline-block;
+.img-chair .visible {
+  display: inline-block;
 }
 
 section.banner .col {
@@ -348,15 +348,22 @@ section.offer .col {
   padding-bottom: 0.75em;
   background-color: rgb(255, 255, 255);
   background-color: rgba(255, 255, 255, 0.5);
-  transition: 2s linear;
-  -webkit-transition: 2s linear;
-  -moz-transition: 2s linear;
-  -o-transition: margin-right 2s linear;
+}
 
+@keyframes hide {
+  0% {
+    right: 0;
+  }
+  100% {
+    right: -400px;
+  }
 }
 
 section.offer .col:hover .offer-box {
-  right: -400px;
+  -webkit-animation: hide 1s 1 normal forwards;
+  -moz-animation: hide 1s 1 normal forwards;
+  -o-animation: hide 1s 1 normal forwards;
+  animation: hide 1s 1 normal forwards;
 }
 
 .offer-box p {

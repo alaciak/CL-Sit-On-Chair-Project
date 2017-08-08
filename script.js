@@ -161,13 +161,13 @@ document.addEventListener("DOMContentLoaded", function(e) {
   function getPrice() {
 
     switch (listLabels[0].innerHTML) {
-      case 'Clair':
+      case 'Chair Clair':
         chairTypePrice = 500;
         break;
-      case 'Margarita':
+      case 'Chair Margarita':
         chairTypePrice = 450;
         break;
-      case 'Selena':
+      case 'Chair Selena':
         chairTypePrice = 600;
         break;
     }

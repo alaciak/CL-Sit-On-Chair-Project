@@ -58,11 +58,11 @@ document.addEventListener("DOMContentLoaded", function(e) {
   var totalCost = document.querySelector('.sum');
 
 
-  var chairTypePrice;
-  var chairMaterialPrice;
-  var chairColorPrice;
+  var chairTypePrice = 0;
+  var chairMaterialPrice = 0;
+  var chairColorPrice = 0;
   var chairTransportPrice = 0;
-  var totalPrice;
+  var totalPrice = 0;
 
   selectArrows[0].addEventListener('click', toggleChairTypes);
   selectArrows[1].addEventListener('click', toggleChairColors);
@@ -136,7 +136,6 @@ document.addEventListener("DOMContentLoaded", function(e) {
     getTotalPrice();
     chairMaterialCost.innerHTML = chairMaterialPrice + ' zł';
     totalCost.innerHTML = totalPrice + ' zł';
-
   }
 
   transportCheckbox.addEventListener('click', chooseTransport);
@@ -147,9 +146,9 @@ document.addEventListener("DOMContentLoaded", function(e) {
       transportCost.innerHTML = chairTransportPrice + ' zł';
       transportChosen.innerHTML = 'Transport';
     } else {
+      chairTransportPrice = 0;
       transportCost.innerHTML = '';
       transportChosen.innerHTML = '';
-      chairTransportPrice = 0;
     }
     getPrice();
     getTotalPrice();
@@ -194,17 +193,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
   }
 
   function getTotalPrice() {
-    if (chairTypePrice === undefined || null) {
-      chairTypePrice = 0;
-    }
-    if (chairColorPrice === undefined || null) {
-      chairColorPrice = 0;
-    }
-    if (chairMaterialPrice === undefined || null) {
-      chairMaterialPrice = 0;
-    }
     totalPrice = chairTypePrice + chairColorPrice + chairMaterialPrice + chairTransportPrice;
-    return totalPrice;
   }
 
 });

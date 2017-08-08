@@ -14,7 +14,7 @@
       <div class="row">
         <div class="col">
           <a href="#">
-            <p>sit <span>on</span> chair</p>
+            <p>sit <span class="slogan">on</span> chair</p>
           </a>
         </div>
         <nav class="col">
@@ -22,17 +22,19 @@
             <li class="main-menu">
 
               <a href="#">o firmie</a>
-              <ul class="dropdown-menu">
-                <li>
-                  <a href="#">Aktualności</a>
-                </li>
-                <li>
-                  <a href="#">Nasz team</a>
-                </li>
-                <li>
-                  <a href="#">Historia</a>
-                </li>
-              </ul>
+              <div class="dropdown-menu">
+                <ul>
+                  <li>
+                    <a href="#">Aktualności</a>
+                  </li>
+                  <li>
+                    <a href="#">Nasz team</a>
+                  </li>
+                  <li>
+                    <a href="#">Historia</a>
+                  </li>
+                </ul>
+              </div>
             </li>
             <li class="main-menu">
               <a href="#">galeria</a>
@@ -63,7 +65,7 @@
           </ul>
         </div>
         <div class="col">
-          <h1>Sit <span>on </span>our <span>chair</span></h1>
+          <h1>Sit <span class="slogan">on </span>our <span class="slogan">chair</span></h1>
           <p>Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta urna.</p>
           <a href="#" class="button-info">
             zobacz więcej
@@ -175,6 +177,82 @@
     </div>
   </section>
 
+  <section class="application ">
+    <div class="container">
+      <div class="row">
+        <div class="col inline">
+
+          <h2>SKOMPONUJ SWOJE KRZESŁO</h2>
+          <span class="green-line"></span>
+
+
+          <div class="form">
+            <div class="dropdown-list">
+              <span class="list-label">Wybierz rodzaj</span>
+              <span class="list-arrow"></span>
+              <ul id="chair-type" class="list-panel">
+                <li>Clair</li>
+                <li>Margarita</li>
+                <li>Selena</li>
+              </ul>
+            </div>
+            <div class="dropdown-list">
+              <span class="list-label">Wybierz kolor</span>
+              <span class="list-arrow"></span>
+              <ul id="chair-color" class="list-panel">
+                <li>Czerwony</li>
+                <li>Czarny</li>
+                <li>Pomarańczowy</li>
+              </ul>
+            </div>
+            <div class="dropdown-list">
+              <span class="list-label">Wybierz materiał</span>
+              <span class="list-arrow"></span>
+              <ul id="chair-material" class="list-panel">
+                <li>Tkanina</li>
+                <li>Skóra</li>
+              </ul>
+            </div>
+            <div class="checkbox check-box">
+              <input type="checkbox" id="transport" data-transport-price="200">
+              <label for="transport">Transport</label>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col image-part ">
+          <img src="images/red_chair.png">
+        </div>
+
+        <div class="col summary-part">
+          <h2>PODSUMOWANIE</h2>
+          <span class="green-line"></span>
+
+
+          <div class="summary-panel">
+            <div class="panel-left">
+              <h4 class="type">Twój fotel</h4>
+              <span class="color"></span>
+              <span class="pattern"></span>
+              <span class="transport"></span>
+            </div>
+            <div class="panel-right">
+              <h4 class="type value"></h4>
+              <span class="color value"></span>
+              <span class="pattern value"></span>
+              <span class="transport value"></span>
+            </div>
+            <div class="sum-label">SUMA</div>
+            <div class="sum"><strong></strong></div>
+          </div>
+          <a href="" class="button-order">Zamawiam</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <section class="contact">
     <div class="container">
       <div class="row">
@@ -182,17 +260,17 @@
           <h2>Kontakt</h2>
           <form action="" method="post" name="contact">
             <input type="text" name="name" placeholder="Imię" />
-            <input type="email" name="email" placeholder="email" />
+            <input type="email" name="email" placeholder="Email" />
             <textarea name="about" placeholder="Wiadomość"></textarea>
           </form>
         </div>
         <div class="col agreement">
           <div>
-            <img src="images/red_chair.png" alt="red chair"/>
+            <img src="images/orange.png" alt="orange chair" />
           </div>
           <div>
             <div class="form-ok">
-              <img class="checkbox" src="images/form_ok.jpg" alt="ok"/>
+              <img class="checkbox2" src="images/form_ok.jpg" alt="ok" />
             </div>
             <p>Zgadzam się na przetwarzanie danych osobowych</p>
           </div>
@@ -231,7 +309,7 @@
     </div>
   </footer>
 
-<script type="text/javascript" src="script.js"></script>
+  <script type="text/javascript" src="script.js"></script>
 </body>
 
 </html>

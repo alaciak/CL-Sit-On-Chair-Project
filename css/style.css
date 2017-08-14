@@ -666,14 +666,19 @@ sup {
 }
 
 .image-part img {
-  margin-top: 30%;
-  margin-left: 13%;
+  display: none;
+  margin-top: 25%;
+
 }
 
 .image-part {
   width: 30%;
   margin: 0 1.66%;
+  display: flex;
+  justify-content: center;
 }
+
+
 
 .application .green-line {
   background: #24C8AD;

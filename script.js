@@ -57,6 +57,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
   var transportCost = document.querySelector('.transport.value');
   var totalCost = document.querySelector('.sum');
 
+  var chairImages = document.querySelectorAll('.image-part img');
 
   var chairTypePrice = 0;
   var chairMaterialPrice = 0;
@@ -72,6 +73,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
   chairType.style.display = 'none';
   chairColor.style.display = 'none';
   chairMaterial.style.display = 'none';
+  chairImages[0].style.display = 'block';
 
   function toggleList(listComponent) {
     if (listComponent.style.display === 'none') {
@@ -93,6 +95,10 @@ document.addEventListener("DOMContentLoaded", function(e) {
     toggleList(chairMaterial);
   }
 
+  function toggleChairImages(e) {
+    toggleList(chairImages);
+  }
+
   for (var i = 0; i < chairType.children.length; i++) {
     chairType.children[i].addEventListener('click', chooseChairType);
   }
@@ -102,6 +108,8 @@ document.addEventListener("DOMContentLoaded", function(e) {
     listLabels[0].classList.add('chair-type-chosen');
     chairType.style.display = 'none';
     chairTypeChosen.innerHTML = this.innerHTML;
+
+    getChairImage();
     getPrice();
     getTotalPrice();
     chairTypeCost.innerHTML = chairTypePrice + ' zł';
@@ -156,6 +164,26 @@ document.addEventListener("DOMContentLoaded", function(e) {
   }
 
   // CALCULATOR - CHAIR COMPONENT
+
+  function getChairImage() {
+    switch (listLabels[0].innerHTML) {
+      case 'Chair Clair':
+        chairImages[0].style.display = 'block';
+        chairImages[1].style.display = 'none';
+        chairImages[2].style.display = 'none';
+        break;
+      case 'Chair Margarita':
+        chairImages[0].style.display = 'none';
+        chairImages[1].style.display = 'block';
+        chairImages[2].style.display = 'none';
+        break;
+      case 'Chair Selena':
+        chairImages[0].style.display = 'none';
+        chairImages[1].style.display = 'none';
+        chairImages[2].style.display = 'block';
+        break;
+    }
+  }
 
   function getPrice() {
 

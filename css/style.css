@@ -181,6 +181,10 @@ a {
 /* HEADER */
 
 header {
+  height: 8vh;
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
   background: #000;
   color: #fff;
   text-transform: uppercase;
